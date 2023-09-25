@@ -7,12 +7,12 @@ const styles = {
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "space-between",
-    "& li:nth-child(1) .topCatIcon": { borderColor: "#E2892F" },
-    "& li:nth-child(1) h5": { backgroundColor: "#FFECC0" },
-    "& li:nth-child(2) .topCatIcon": { borderColor: "#F75864" },
-    "& li:nth-child(2) h5": { backgroundColor: "#FFDCE8" },
-    "& li:nth-child(3) .topCatIcon": { borderColor: "#007665" },
-    "& li:nth-child(3) h5": { backgroundColor: "#D3F3E2" },
+    "& li:nth-of-type(1) .topCatIcon": { borderColor: "#E2892F" },
+    "& li:nth-of-type(1) h5": { backgroundColor: "#FFECC0" },
+    "& li:nth-of-type(2) .topCatIcon": { borderColor: "#F75864" },
+    "& li:nth-of-type(2) h5": { backgroundColor: "#FFDCE8" },
+    "& li:nth-of-type(3) .topCatIcon": { borderColor: "#007665" },
+    "& li:nth-of-type(3) h5": { backgroundColor: "#D3F3E2" },
   },
   listStyle: {
     backgroundColor: "#F6F4FD",
@@ -78,8 +78,8 @@ const TopCategories = ({ rummYData }) => {
         Top 3 Categories
       </Typography>
       <Box component="ul" sx={styles.ulStyle}>
-        {rummYData?.topThreeCategories?.map((item) => (
-          <Box component="li" sx={styles.listStyle}>
+        {rummYData?.topThreeCategories?.map((item , index) => (
+          <Box component="li" sx={styles.listStyle} key={index}>
             <Box className="topCatIcon" sx={styles.iconStyle}>
               <img src={item.icon} alt="" />
             </Box>

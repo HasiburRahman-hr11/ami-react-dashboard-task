@@ -53,8 +53,8 @@ const TopSellers = ({ rummYData }) => {
           <Box sx={{ width: "15%", textAlign: "center" }}>Payout</Box>
         </Box>
 
-        {rummYData?.topFiveSellers?.map((item) => (
-          <Box sx={styles.listItem}>
+        {rummYData?.topFiveSellers?.map((item , index) => (
+          <Box sx={styles.listItem} key={index}>
             <Box sx={{ width: "15%", paddingLeft: "1.5rem" , "@media (max-width: 600px)":{paddingLeft: '1rem'} }}>
               <Avatar
                 alt={item.name}
