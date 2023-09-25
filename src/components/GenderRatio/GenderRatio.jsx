@@ -23,89 +23,92 @@ export const options = {
   },
 };
 
-const GenderRatio = ({rummYData}) => {
+const styles = {
+  listItem: {
+    display: "flex",
+    alignItems: "center",
+    fontSize: "1.5rem",
+    color: "#485058",
+    marginBottom: "1rem",
+    "@media (max-width: 600px)": {
+      justifyContent: "flex-start",
+      width: "30%",
+    },
+  },
+  listItemBefore: {
+    width: "8px",
+    height: "8px",
+    borderRadius: "50%",
+    display: "inline-block",
+    marginRight: "10px",
+  },
+};
+
+const GenderRatio = ({ rummYData }) => {
   return (
     <Box component="div">
       <Box
         component="div"
-        sx={{ display: "flex", justifyContent: "space-between" }}
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          flexWrap: "wrap",
+        }}
       >
-        <Box component="div" sx={{ width: "35%" }}>
+        <Box
+          component="div"
+          sx={{
+            width: "35%",
+            "@media (max-width: 600px)": {
+              width: "100%",
+            },
+          }}
+        >
           <Typography
             variant="h3"
             component="h3"
             className="section-title"
-            sx={{ marginBottom: "5rem" }}
+            sx={{ marginBottom: {xs:'3rem', sm: '5rem'} }}
           >
             Gender Ratio
           </Typography>
-          <Box component="ul" sx={{ "& li": { marginBottom: "1rem" } }}>
-            <Box
-              component="li"
-              sx={{
+          <Box
+            component="ul"
+            sx={{
+              "@media (max-width: 600px)": {
                 display: "flex",
-                alignItems: "center",
-                fontSize: "1.5rem",
-                color: "#485058",
-              }}
-            >
-              <Box
-                sx={{
-                  width: "8px",
-                  height: "8px",
-                  borderRadius: "50%",
-                  backgroundColor: "#1F145E",
-                  display: "inline-block",
-                  marginRight: "10px",
-                }}
-              ></Box>
+                justifyContent: "space-between",
+                flexWrap: "wrap",
+              },
+            }}
+          >
+            <Box component="li" sx={styles.listItem}>
+              <Box sx={{...styles.listItemBefore, backgroundColor: "#1F145E"}}></Box>
               Male
             </Box>
-            <Box
-              component="li"
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                fontSize: "1.5rem",
-                color: "#485058",
-              }}
-            >
+            <Box component="li" sx={styles.listItem}>
               <Box
-                sx={{
-                  width: "8px",
-                  height: "8px",
-                  borderRadius: "50%",
-                  backgroundColor: "#FB8DB3",
-                  display: "inline-block",
-                  marginRight: "10px",
-                }}
+                sx={{...styles.listItemBefore, backgroundColor: "#FB8DB3"}}
               ></Box>
               Female
             </Box>
-            <Box
-              component="li"
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                fontSize: "1.5rem",
-                color: "#485058",
-              }}
-            >
+            <Box component="li" sx={styles.listItem}>
               <Box
-                sx={{
-                  width: "8px",
-                  height: "8px",
-                  borderRadius: "50%",
-                  backgroundColor: "#566FFE",
-                  display: "inline-block",
-                  marginRight: "10px",
-                }}
+                sx={{...styles.listItemBefore, backgroundColor: "#566FFE"}}
               ></Box>
               Other
             </Box>
           </Box>
         </Box>
-        <Box component="div" sx={{ width: "65%" }}>
+        <Box
+          component="div"
+          sx={{
+            width: "65%",
+            "@media (max-width: 600px)": {
+              width: "100%",
+            },
+          }}
+        >
           <Chart
             chartType="PieChart"
             width="100%"

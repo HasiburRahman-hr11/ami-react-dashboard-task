@@ -14,7 +14,7 @@ const styles = {
     "& li:nth-child(3) .topCatIcon": { borderColor: "#007665" },
     "& li:nth-child(3) h5": { backgroundColor: "#D3F3E2" },
   },
-  liSTyle: {
+  listStyle: {
     backgroundColor: "#F6F4FD",
     padding: "3rem 1rem",
     borderRadius: "10px",
@@ -24,12 +24,13 @@ const styles = {
     marginTop: "2rem",
     width: "31%",
     alignItems: 'center',
-    // "@media (max-width: 1199px)": {
-    //   width: "100%",
-    //   flexDirection: 'row',
-    //   justifyContent:'flex-start',
-    //   maxWidth: '600px'
-    // },
+    "@media (max-width: 600px)": {
+      width: "100%",
+      flexDirection: 'row',
+      justifyContent:'space-between',
+      flexWrap:'wrap',
+      padding: '1.5rem 2rem'
+    },
   },
   iconStyle: {
     width: "6rem",
@@ -40,10 +41,10 @@ const styles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    // "@media (max-width: 1199px)": {
-    //   marginLeft:'0',
-    //   marginRight: '1rem'
-    // },
+    "@media (max-width: 600px)": {
+      marginLeft:'0',
+      marginRight: '1rem'
+    },
   },
   titleStyle: {
     fontSize: "2.5rem",
@@ -52,13 +53,21 @@ const styles = {
     padding: "1.1rem 3rem",
     display: "inline-block",
     borderRadius: "1rem",
-    width: 'max-content'
+    width: 'max-content',
+    "@media (max-width: 600px)":{
+      padding: '1rem 2rem',
+      fontSize: '2rem',
+      borderRadius: '0.5rem'
+    }
   },
   peraStyle: {
     color: "#3E3879",
     fontSize: "1.4rem",
     fontFamily: "Noir Pro",
     margin: "4rem 0",
+    "@media (max-width: 600px)":{
+      margin: '1rem 1rem'
+    }
   },
 };
 
@@ -70,7 +79,7 @@ const TopCategories = ({ rummYData }) => {
       </Typography>
       <Box component="ul" sx={styles.ulStyle}>
         {rummYData?.topThreeCategories?.map((item) => (
-          <Box component="li" sx={styles.liSTyle}>
+          <Box component="li" sx={styles.listStyle}>
             <Box className="topCatIcon" sx={styles.iconStyle}>
               <img src={item.icon} alt="" />
             </Box>

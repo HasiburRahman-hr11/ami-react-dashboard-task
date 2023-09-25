@@ -8,6 +8,18 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { BsCalendar4 } from "react-icons/bs";
 
+const styles = {
+  filterBox: {
+    display: "flex",
+    alignItems: "center",
+    border: "1px solid #E7E3F3",
+    paddingLeft: "10px",
+    borderRadius: "7px",
+    width: "max-content",
+    marginLeft: { xs: "0", sm: "auto" },
+  },
+};
+
 const RummyAnalytics = ({ dateFilter, setDateFilter, rummYData }) => {
   const handleFilterChange = (event) => {
     setDateFilter(event.target.value);
@@ -24,24 +36,18 @@ const RummyAnalytics = ({ dateFilter, setDateFilter, rummYData }) => {
           marginBottom: "3rem",
         }}
       >
-        <Grid item xs={8}>
-          <Typography variant="h3" component="h3" className="section-title">
+        <Grid item xs={12} sm={8}>
+          <Typography
+            variant="h3"
+            component="h3"
+            className="section-title"
+            sx={{ textAlign: { xs: "center", sm: "left" } }}
+          >
             Rummy App Analytics
           </Typography>
         </Grid>
-        <Grid item xs={4}>
-          <Box
-            className="filter-box"
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              border: "1px solid #E7E3F3",
-              paddingLeft: "10px",
-              borderRadius: "7px",
-              width: "max-content",
-              marginLeft: "auto",
-            }}
-          >
+        <Grid item xs={12} sm={4}>
+          <Box className="filter-box" sx={styles.filterBox}>
             <span className="filter-icon">
               <BsCalendar4 style={{ fontSize: "1.5rem", color: "#D3CFE2" }} />
             </span>
@@ -76,7 +82,7 @@ const RummyAnalytics = ({ dateFilter, setDateFilter, rummYData }) => {
         className="rummy-analytics-list"
         sx={{
           display: "flex",
-          flexWrap: 'wrap'
+          flexWrap: "wrap",
         }}
       >
         <Box component="li" sx={{ backgroundColor: "#FFECC0" }}>

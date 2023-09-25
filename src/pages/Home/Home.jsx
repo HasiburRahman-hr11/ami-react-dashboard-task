@@ -15,6 +15,47 @@ import TopSellers from "../../components/TopSellers/TopSellers";
 import GenderRatio from "../../components/GenderRatio/GenderRatio";
 import TopCategories from "../../components/TopCategories/TopCategories";
 import TransactionDetails from "../../components/TransactionDetails/TransactionDetails";
+
+const styles = {
+  topSellersWrapper: {
+    width: "50%",
+    paddingLeft: "2rem",
+    borderLeft: "1px solid #E7E3F3",
+    "@media (max-width: 1199px)": {
+      width: "100%",
+      paddingLeft: "0",
+      borderLeft: "0",
+      marginTop: "5rem",
+    },
+  },
+  topUniWrapper: {
+    width: "50%",
+    paddingRight: "2rem",
+    "@media (max-width: 1199px)": {
+      width: "100%",
+      paddingRight: "0",
+    },
+  },
+  genderBoxWrapper: {
+    width: "50%",
+    padding: "2rem",
+    border: "1px solid #E7E3F3",
+    borderRadius: "10px",
+    "@media (max-width: 1199px)": {
+      width: "100%",
+      marginBottom: "5rem",
+    },
+  },
+  topCatWrapper: {
+    width: "50%",
+    paddingLeft: "2rem",
+    "@media (max-width: 1199px)": {
+      width: "100%",
+      paddingLeft: "0",
+    },
+  },
+};
+
 const Home = () => {
   const [dateFilter, setDateFilter] = useState("today");
   const [rummYData, setRummyData] = useState({});
@@ -45,7 +86,7 @@ const Home = () => {
         <Box
           sx={{
             backgroundColor: "#fff",
-            padding: "5rem 4rem",
+            padding: { xs: "5rem 25px", sm: "5rem 4rem" },
             borderRadius: "3rem",
           }}
         >
@@ -63,60 +104,19 @@ const Home = () => {
               flexWrap: "wrap",
             }}
           >
-            <Box
-              sx={{
-                width: "50%",
-                paddingRight: "2rem",
-                "@media (max-width: 1199px)": {
-                  width: "100%",
-                  paddingRight: "0",
-                },
-              }}
-            >
+            <Box sx={styles.topUniWrapper}>
               <TopUniversities rummYData={rummYData} />
             </Box>
-            <Box
-              sx={{
-                width: "50%",
-                paddingLeft: "2rem",
-                borderLeft: "1px solid #E7E3F3",
-                "@media (max-width: 1199px)": {
-                  width: "100%",
-                  paddingLeft: "0",
-                  borderLeft: "0",
-                  marginTop: "5rem",
-                },
-              }}
-            >
+            <Box sx={styles.topSellersWrapper}>
               <TopSellers rummYData={rummYData} />
             </Box>
           </Box>
 
           <Box sx={{ marginTop: "7rem", display: "flex", flexWrap: "wrap" }}>
-            <Box
-              sx={{
-                width: "50%",
-                padding: "2rem",
-                border: "1px solid #E7E3F3",
-                borderRadius: "10px",
-                "@media (max-width: 1199px)": {
-                  width: "100%",
-                  marginBottom: "5rem",
-                },
-              }}
-            >
+            <Box sx={styles.genderBoxWrapper}>
               <GenderRatio rummYData={rummYData} />
             </Box>
-            <Box
-              sx={{
-                width: "50%",
-                paddingLeft: "2rem",
-                "@media (max-width: 1199px)": {
-                  width: "100%",
-                  paddingLeft: "0",
-                },
-              }}
-            >
+            <Box sx={styles.topCatWrapper}>
               <TopCategories rummYData={rummYData} />
             </Box>
           </Box>
