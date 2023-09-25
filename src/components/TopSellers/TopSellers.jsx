@@ -32,8 +32,9 @@ const TopSellers = ({ rummYData }) => {
       >
         Top 5 Sellers
       </Typography>
-      <Box>
+      <Box component="ul">
         <Box
+        component="li"
           sx={{
             display: "flex",
             justifyContent: "space-between",
@@ -54,7 +55,7 @@ const TopSellers = ({ rummYData }) => {
         </Box>
 
         {rummYData?.topFiveSellers?.map((item , index) => (
-          <Box sx={styles.listItem} key={index}>
+          <Box component="li" sx={styles.listItem} key={index}>
             <Box sx={{ width: "15%", paddingLeft: "1.5rem" , "@media (max-width: 600px)":{paddingLeft: '1rem'} }}>
               <Avatar
                 alt={item.name}

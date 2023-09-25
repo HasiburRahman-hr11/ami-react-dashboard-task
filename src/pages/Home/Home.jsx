@@ -124,6 +124,7 @@ const Home = () => {
           <TransactionDetails rummYData={rummYData} />
         </Box>
       </div>
+     
     </div>
   );
 };

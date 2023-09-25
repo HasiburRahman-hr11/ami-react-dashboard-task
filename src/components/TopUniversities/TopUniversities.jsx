@@ -31,8 +31,9 @@ const TopUniversities = ({ rummYData }) => {
       >
         Top 5 Universities By User Count
       </Typography>
-      <Box>
+      <Box component="ul">
         <Box
+        component="li"
           sx={{
             display: "flex",
             justifyContent: "space-between",
@@ -50,7 +51,7 @@ const TopUniversities = ({ rummYData }) => {
           <Box sx={{ width: "15%", textAlign: "center" }}>RL</Box>
         </Box>
         {rummYData?.topFiveUniversities?.map((item , index) => (
-          <Box sx={styles.listItem} key={index}>
+          <Box component="li" sx={styles.listItem} key={index}>
             <Box sx={{ width: "45%", overflow:'hidden', paddingLeft: "3.5rem", "@media (max-width: 600px)":{paddingLeft: '1rem'} }}>
               {item.collegeName}
             </Box>
