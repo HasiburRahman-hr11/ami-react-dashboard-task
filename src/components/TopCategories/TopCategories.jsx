@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 const styles = {
   ulStyle: {
     display: "flex",
+    flexWrap: "wrap",
     justifyContent: "space-between",
     "& li:nth-child(1) .topCatIcon": { borderColor: "#E2892F" },
     "& li:nth-child(1) h5": { backgroundColor: "#FFECC0" },
@@ -15,13 +16,20 @@ const styles = {
   },
   liSTyle: {
     backgroundColor: "#F6F4FD",
-    padding: "3rem 3rem",
+    padding: "3rem 1rem",
     borderRadius: "10px",
     textAlign: "center",
     display: "flex",
     flexDirection: "column",
     marginTop: "2rem",
     width: "31%",
+    alignItems: 'center',
+    // "@media (max-width: 1199px)": {
+    //   width: "100%",
+    //   flexDirection: 'row',
+    //   justifyContent:'flex-start',
+    //   maxWidth: '600px'
+    // },
   },
   iconStyle: {
     width: "6rem",
@@ -32,6 +40,10 @@ const styles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    // "@media (max-width: 1199px)": {
+    //   marginLeft:'0',
+    //   marginRight: '1rem'
+    // },
   },
   titleStyle: {
     fontSize: "2.5rem",
@@ -40,6 +52,7 @@ const styles = {
     padding: "1.1rem 3rem",
     display: "inline-block",
     borderRadius: "1rem",
+    width: 'max-content'
   },
   peraStyle: {
     color: "#3E3879",

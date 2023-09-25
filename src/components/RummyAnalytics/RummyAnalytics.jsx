@@ -76,6 +76,7 @@ const RummyAnalytics = ({ dateFilter, setDateFilter, rummYData }) => {
         className="rummy-analytics-list"
         sx={{
           display: "flex",
+          flexWrap: 'wrap'
         }}
       >
         <Box component="li" sx={{ backgroundColor: "#FFECC0" }}>

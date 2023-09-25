@@ -210,3 +210,36 @@ div {
   font-weight: 500;
   font-family: "Noir Pro";
 }
+
+
+@media screen and (max-width: 1199px){
+  .rummy-analytics-list li{
+    width: 32%;
+    margin-right: 2%;
+    margin-bottom: 1.5rem;
+  }
+  .rummy-analytics-list li:nth-child(3){
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 1023px){
+  .rummy-analytics-list li{
+    padding: 3rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 990px){
+  .sidebar{
+    left: -100%;
+  }
+  .content-wrapper{
+    width: 100%;
+    padding: 0;
+    border-radius: 0;
+  }
+}
+
+@media screen and (max-width: 768px){
+
+}
+

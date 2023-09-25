@@ -14,9 +14,16 @@ export const options = {
   pieHole: 0.4,
   is3D: false,
   colors: ["#1F145E", "#FB8DB3", "#566FFE"],
+  legend: "none",
+  chartArea: {
+    left: "0%",
+    top: "5%",
+    width: "100%",
+    height: "90%",
+  },
 };
 
-const GenderRatio = () => {
+const GenderRatio = ({rummYData}) => {
   return (
     <Box component="div">
       <Box
@@ -102,8 +109,8 @@ const GenderRatio = () => {
           <Chart
             chartType="PieChart"
             width="100%"
-            height="350px"
-            data={data}
+            height="250px"
+            data={rummYData.genderRatio}
             options={options}
           />
         </Box>

@@ -79,7 +79,8 @@ export const todaysData = {
       payout: 24,
     },
   ],
-  genderRation: [
+  genderRatio: [
+    ["Gender", "Percentage"],
     ["Male", 30],
     ["Female", 60],
     ["Other", 10],
@@ -178,7 +179,8 @@ export const yesterdayData = {
     },
   ],
 
-  genderRation: [
+  genderRatio: [
+    ["Gender", "Percentage"],
     ["Male", 35],
     ["Female", 55],
     ["Other", 10],
@@ -276,10 +278,11 @@ export const thisWeekData = {
       payout: 24,
     },
   ],
-  genderRation: [
-    ["Male", 30],
-    ["Female", 60],
-    ["Other", 10],
+  genderRatio: [
+    ["Gender", "Percentage"],
+    ["Male", 38],
+    ["Female", 54],
+    ["Other", 8],
   ],
   topThreeCategories: [
     { icon: "https://i.ibb.co/M8wS7zx/top-cat-icon-1.png", title: "Dresses", amount: "19K" },
@@ -375,10 +378,11 @@ export const thisMonthData = {
     },
   ],
 
-  genderRation: [
-    ["Male", 35],
-    ["Female", 55],
-    ["Other", 10],
+  genderRatio: [
+    ["Gender", "Percentage"],
+    ["Male", 25],
+    ["Female", 60],
+    ["Other", 15],
   ],
   topThreeCategories: [
     { icon: "https://i.ibb.co/M8wS7zx/top-cat-icon-1.png", title: "Dresses", amount: "15K" },
